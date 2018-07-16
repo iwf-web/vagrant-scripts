@@ -50,6 +50,8 @@ The scripts register some provisioning scripts which can be run even after a pro
 
 The following provisioners only run on initial setup, but can be re-run later:
 
+* `startup`: Use this one to run the project-specific `vagrant-run-after-boot.sh` script (if available)
+* `vagrant-setup`: Use this one to run the project-specific `vagrant-setup.sh` script (if available)
 * `docker-login`: Use this one to re-login to Docker in your Vagrant box
 * `run-docker-local-build`: Use this one to run the local Docker build in your Vagrant box
 * `install-docker`: Use this one to update Docker inside your Vagrant box
