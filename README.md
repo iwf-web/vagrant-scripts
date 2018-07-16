@@ -54,6 +54,8 @@ The following provisioners only run on initial setup, but can be re-run later:
 * `run-docker-local-build`: Use this one to run the local Docker build in your Vagrant box
 * `install-docker`: Use this one to update Docker inside your Vagrant box
 
+To re-provision the whole machine, run: `vagrant provision`
+
 
 Migrate your project to vagrant-scripts
 ---------------------------------------
