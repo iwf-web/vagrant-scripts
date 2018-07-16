@@ -18,12 +18,12 @@ def init_all(config, settings)
     apply_vm_settings(config, settings)
     init_shared_folder(config, settings)
 
+    prov_copy_ssh_key(config)
+    prov_docker_login(config)
+
     prov_install_docker(config)
     prov_install_php_proxy(config)
     prov_run_docker_local_build(config)
-
-    prov_copy_ssh_key(config)
-    prov_docker_login(config)
 
     prov_local_boot_scripts(config)
 
