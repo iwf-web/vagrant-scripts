@@ -15,5 +15,8 @@
       "name": "Jens Hassler",
       "email": "j.hassler@iwf.ch"
     }
-  ]
+  ],
+  "require-dev": {
+    "liip/rmt": "^1.3"
+  }
 }
