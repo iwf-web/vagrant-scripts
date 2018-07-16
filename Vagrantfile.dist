@@ -14,7 +14,7 @@ end
 
 settings = YAML.load_file 'vagrant_settings.yml'
 
-require_relative '../../vagrant/coala/vagrant-scripts/scripts/all.rb'
+require_relative 'scripts/all.rb'
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     init_all(config, settings)
