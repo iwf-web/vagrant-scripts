@@ -18,7 +18,7 @@ Installation in your project
 * From the root folder of your project, run:
   `git subtree add --prefix docker/vagrant-scripts git@git.iwf.io:helper/vagrant-scripts.git master --squash`
 * Create the folder `docker/vagrant` (if not already existing)
-* Copy the `Vagrantfile.dist` to a `Vagrantfile` in your `vagrant` folder
+* Create a `Vagrantfile` in your `vagrant` folder containing this line: `load '../vagrant-scripts/Vagrantfile.dist'`
 * Copy the `vagrant_settings.yml.dist` to a `vagrant_settings.yml.dist` in your `vagrant` folder and customize it for your users
 * Go on as usual to setup your local vagrant/docker stuff (copy .dist to local copy, run vagrant up...)
 
