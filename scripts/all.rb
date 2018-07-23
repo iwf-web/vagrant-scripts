@@ -13,6 +13,7 @@ require_relative 'prov-create-app-data-folders.rb'
 require_relative 'prov-run-docker-local-build.rb'
 require_relative 'prov-local-boot-scripts.rb'
 require_relative 'prov-fix-app-data-permissions.rb'
+require_relative 'prov-chdir-to-docker-run.rb'
 
 def init_all(config, settings)
     init_base_vm(config)
@@ -26,6 +27,7 @@ def init_all(config, settings)
     prov_install_docker(config)
     prov_install_php_proxy(config)
     prov_create_app_data_folders(config)
+    prov_chdir_to_docker_run(config)
     prov_run_docker_local_build(config)
 
     prov_fix_app_data_permissions(config)
