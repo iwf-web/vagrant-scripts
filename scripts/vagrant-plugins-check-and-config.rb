@@ -4,7 +4,7 @@
 def vagrant_plugins_config(config)
 
     unless Vagrant.has_plugin?("vagrant-hostsupdater")
-      system("agrant plugin install vagrant-hostsupdater")
+      system("vagrant plugin install vagrant-hostsupdater")
       puts "Dependency 'vagrant-hostsupdater' installed, please try the command again."
       exit
     end
