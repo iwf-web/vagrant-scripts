@@ -12,6 +12,9 @@ def apply_vm_settings(config, settings)
     end
 
     config.vm.provider "virtualbox" do |v|
+        if settings['vm_name']
+            v.name = settings['vm_name']
+        end
         if settings['vm_memory']
             v.memory = settings['vm_memory']
         end
