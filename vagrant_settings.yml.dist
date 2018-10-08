@@ -3,7 +3,10 @@
 # IP leer lassen, um dynamisch per DHCP eine zuzuweisen -- dann funktioniert der Hostsupdater jedoch nicht mehr
 hostname: "YOURHOSTNAME"
 ip: "192.168.X.X"
-vm_name: "YOURVMNAME"
+
+
+# VM-Name ist optional. Standardmässig heisst die VM in VirtualBox wie der oben definierte Hostname
+# vm_name: "YOURVMNAME"
 
 # Hier "nfs" oder "rsync" angeben. Auf Mac funktionieren beide, auf Windows ist NFS vermutlich unbrauchbar
 shared_folder_type: "nfs"
