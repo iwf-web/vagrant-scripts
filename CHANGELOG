@@ -2,6 +2,9 @@
 VERSION 1  FIRST COMPOSER VERSION
 =================================
 
+   Version 1.1 - Fix problem with notify-forwarder
+      21/12/2018 11:26  1.1.0  initial release
+
    Version 1.0 - first composer version
       08/10/2018 09:21  1.0.7  VM name is now optional
       02/10/2018 12:29  1.0.6  Add vm_name setting
