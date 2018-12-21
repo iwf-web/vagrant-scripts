@@ -3,7 +3,6 @@
 # IP leer lassen, um dynamisch per DHCP eine zuzuweisen -- dann funktioniert der Hostsupdater jedoch nicht mehr
 hostname: "YOURHOSTNAME"
 ip: "192.168.X.X"
-notify_port:
 
 # VM-Name ist optional. Standardmässig heisst die VM in VirtualBox wie der oben definierte Hostname
 # vm_name: "YOURVMNAME"
