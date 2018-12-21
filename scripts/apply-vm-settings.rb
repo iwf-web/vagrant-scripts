@@ -9,6 +9,10 @@ def apply_vm_settings(config, settings)
         config.vm.network "private_network", type: "dhcp"
     else
         config.vm.network "private_network", ip: settings['ip']
+
+        # this configures the notify-forwarder to a port derived from the IP address
+        # to ensure that all running boxes have a different port
+        config.notify_forwarder.port = 22000 + settings['ip'].split(".")[2].to_i() + settings['ip'].split(".")[3].to_i()
     end
 
     config.vm.provider "virtualbox" do |v|
