@@ -5,9 +5,9 @@ require_relative 'init-base-vm.rb'
 require_relative 'vagrant-plugins-check-and-config.rb'
 require_relative 'init-shared-folder.rb'
 require_relative 'apply-vm-settings.rb'
+require_relative 'prov-install-docker.rb'
 require_relative 'prov-docker-login.rb'
 require_relative 'prov-copy-ssh-key.rb'
-require_relative 'prov-install-docker.rb'
 require_relative 'prov-install-php-proxy.rb'
 require_relative 'prov-create-app-data-folders.rb'
 require_relative 'prov-run-docker-local-build.rb'
@@ -21,10 +21,10 @@ def init_all(config, settings)
     apply_vm_settings(config, settings)
     init_shared_folder(config, settings)
 
+    prov_install_docker(config)
     prov_copy_ssh_key(config)
     prov_docker_login(config)
 
-    prov_install_docker(config)
     prov_install_php_proxy(config)
     prov_create_app_data_folders(config)
     prov_chdir_to_docker_run(config)
@@ -33,5 +33,5 @@ def init_all(config, settings)
     prov_fix_app_data_permissions(config)
     prov_local_boot_scripts(config)
 
-    config.vm.post_up_message = "Machine was booted. The application is available on http://" + settings['hostname']
+    config.vm.post_up_message = "Machine was booted, startup scripts are running inside the docker containers - please wait. If you're curious, you can execute 'docker logs -t fpm' inside vagrant or use the docker-logs.sh script. Once finished, the application will be available on http://" + settings['hostname']
 end
