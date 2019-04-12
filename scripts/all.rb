@@ -8,6 +8,7 @@ require_relative 'apply-vm-settings.rb'
 require_relative 'prov-install-docker.rb'
 require_relative 'prov-docker-login.rb'
 require_relative 'prov-copy-ssh-key.rb'
+require_relative 'prov-enable-ssh-password-auth.rb'
 require_relative 'prov-install-php-proxy.rb'
 require_relative 'prov-create-app-data-folders.rb'
 require_relative 'prov-run-docker-local-build.rb'
@@ -21,6 +22,7 @@ def init_all(config, settings)
     apply_vm_settings(config, settings)
     init_shared_folder(config, settings)
 
+    prov_enable_ssh_password_auth(config)
     prov_install_docker(config)
     prov_copy_ssh_key(config)
     prov_docker_login(config)
