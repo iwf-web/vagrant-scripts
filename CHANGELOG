@@ -3,6 +3,7 @@ VERSION 2  MAJOR UPGRADE TO DEBIAN STRETCH
 ==========================================
 
    Version 2.0 - Major upgrade to Debian Stretch
+      12/04/2019 11:17  2.0.1  re-enable password authentication in vagrant box
       29/03/2019 16:32  2.0.0  initial release
 
 VERSION 1  FIRST COMPOSER VERSION
