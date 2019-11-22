@@ -3,6 +3,8 @@ Vagrant-Dev-Scripts
 
 This is the central managed scripting resource for local Vagrant development.
 
+Please have a look inside the [Symfony Vagrant Docker Example project](https://github.com/iwf-web/symfony-vagrant-docker-example) for a ready-to-run example application.
+
 
 ATTENTION
 ---------
@@ -58,18 +60,4 @@ The following provisioners only run on initial setup, but can be re-run later:
 * `install-docker`: Use this one to update Docker inside your Vagrant box
 
 To re-provision the whole machine, run: `vagrant provision`
-
-
-Migrate your project to vagrant-scripts
----------------------------------------
-
-To migrate your existing project to these centrally managed vagrant scripts, perform these steps:
-
-* Remove the following files from your docker/vagrant folder: `Vagrantfile`, `tools`
-* Remove the following sections from your `vagrant-setup.sh` file because they are now done through the central scripts. Normally the file
-  will be empty (except comments) after removing this stuff:
-  * install docker release
-  * create PhpStorm PHP-Proxy-Script
-  * run the local Docker build
-* Perform the steps above: "Installation in your project"
 

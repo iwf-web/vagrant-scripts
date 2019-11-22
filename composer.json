@@ -1,15 +1,9 @@
 {
-  "name": "coala/vagrant-scripts",
+  "name": "iwf-web/vagrant-scripts",
   "description": "Base scripts for local vagrant/docker boxes",
   "keywords": ["vagrant", "docker"],
   "license": "MIT",
-  "homepage": "https://git.iwf.io/helper/vagrant-scripts",
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://packages.iwf.io"
-    }
-  ],
+  "homepage": "https://github.com/iwf-web/vagrant-scripts",
   "authors": [
     {
       "name": "Jens Hassler",
