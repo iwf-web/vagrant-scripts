@@ -31,7 +31,7 @@ Update
 
 From time to time, and to use newly introduced features, you should upgrade your vagrant-scripts:
 
-* `git subtree pull --prefix docker/vagrant-scripts git@git.iwf.io:helper/vagrant-scripts.git master --squash`
+* `git subtree pull --prefix docker/vagrant-scripts https://github.com/iwf-web/vagrant-scripts.git master --squash`
  
 
 Customization
