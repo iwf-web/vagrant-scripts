@@ -2,6 +2,9 @@
 VERSION 2  MAJOR UPGRADE TO DEBIAN STRETCH
 ==========================================
 
+   Version 2.1 - New "aliases" config option
+      02/09/2020 13:19  2.1.0  initial release
+
    Version 2.0 - Major upgrade to Debian Stretch
       22/11/2019 13:40  2.0.4  Small updates for publishing on Github
       15/11/2019 12:40  2.0.3  temporary fix for base box issue with vbguest plugin
