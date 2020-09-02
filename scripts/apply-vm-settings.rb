@@ -5,6 +5,10 @@ def apply_vm_settings(config, settings)
 
     config.vm.hostname = settings['hostname']
 
+    if settings['aliases']
+        config.hostsupdater.aliases = settings['aliases']
+    end
+
     if settings['ip'] == ""
         config.vm.network "private_network", type: "dhcp"
     else

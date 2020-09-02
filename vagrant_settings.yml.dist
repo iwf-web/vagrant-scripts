@@ -4,6 +4,9 @@
 hostname: "YOURHOSTNAME"
 ip: "192.168.X.X"
 
+# Hier können Aliases für "hostname" definiert werden. Bitte als Array angeben, z.B.: ["hostname-alias1", "hostname-alias2"]
+# aliases: []
+
 # VM-Name ist optional. Standardmässig heisst die VM in VirtualBox wie der oben definierte Hostname
 # vm_name: "YOURVMNAME"
 
