@@ -3,6 +3,8 @@
 
 def apply_vm_settings(config, settings)
 
+    config.vbguest.auto_update = false # temporary until base box is updated (see https://github.com/dotless-de/vagrant-vbguest/issues/351)
+
     config.vm.hostname = settings['hostname']
 
     if settings['aliases']

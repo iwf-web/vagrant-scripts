@@ -15,6 +15,12 @@ def vagrant_plugins_config(config)
       exit
     end
 
+    unless Vagrant.has_plugin?("vagrant-vbguest")
+      system("vagrant plugin install vagrant-vbguest")
+      puts "Dependency 'vagrant-vbguest' installed, please try the command again."
+      exit
+    end
+
     # Configure the window for gatling to coalesce writes.
     if Vagrant.has_plugin?("vagrant-gatling-rsync")
       config.gatling.latency = 1.5
