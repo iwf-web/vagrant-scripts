@@ -61,3 +61,47 @@ The following provisioners only run on initial setup, but can be re-run later:
 
 To re-provision the whole machine, run: `vagrant provision`
 
+
+Vbguest plugin
+--------------
+
+The Vbguest plugin (vagrant-vbguest) should be installed and up-to-date on your host system Basically, the plugin should be updated each time 
+you upgrade Virtualbox and/or Vagrant. It installs the "VirtualBox guest additions" inside your VM.
+
+If the guest additions are not running inside your vagrant box, you may experience the following behaviour:
+
+- The VM date/time is not synchronized with the host, each time you put your host into sleep mode, the time stops in your VM - which may lead to wrong
+  timestamps and other strange behaviour in your application
+  
+- The VM tends to get slower and decrease a lot in performance. It's not clear yet when this happens, and if this is really connected with the guest addtions
+
+Installing the guest additions require an up-2-date kernel. The problem is discussed here: https://github.com/dotless-de/vagrant-vbguest/issues/351
+
+That's why we try to do a update and upgrade of the system including a kernel upgrade before installing the plugin. This is done in `init-base-vm.rb`.
+
+After the initial setup you should `halt` your VM and `up` it again to activate the new kernel.
+
+To determine the `vbguest` status, you can use:
+
+`vagrant vbguest --status`
+
+This should output something like: `[default] GuestAdditions 6.1.18 running --- OK.`
+
+
+Please check inside the VM if the kernel module has been loaded:
+
+```
+  root@tourenbuch:/vagrant/docker/run# lsmod | grep -i vbox
+  vboxsf                 77824  0
+  vboxvideo              36864  1
+  ttm                    98304  1 vboxvideo
+  drm_kms_helper        155648  1 vboxvideo
+  vboxguest             335872  2 vboxsf
+  drm                   360448  4 vboxvideo,ttm,drm_kms_helper
+```
+
+Troubleshooting:
+
+- on the host: `vagrant vbguest --do install` (e.g. for an update of a running box)
+- on the VM: `modprobe vboxguest`, `modprobe vboxsf`
+
