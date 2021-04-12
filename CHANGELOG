@@ -2,6 +2,9 @@
 VERSION 2  MAJOR UPGRADE TO DEBIAN STRETCH
 ==========================================
 
+   Version 2.3 - kernel and system update before installing vbguest additions
+      12/04/2021 14:53  2.3.0  initial release
+
    Version 2.2 - Add vbguest plugin check, remove vbguest-auto-update config
       09/03/2021 15:54  2.2.0  initial release
 
