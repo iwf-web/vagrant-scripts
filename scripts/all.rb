@@ -36,4 +36,9 @@ def init_all(config, settings)
     prov_local_boot_scripts(config)
 
     config.vm.post_up_message = "Machine was booted, startup scripts are running inside the docker containers - please wait. If you're curious, you can execute 'docker logs -t fpm' inside vagrant or use the docker-logs.sh script. Once finished, the application will be available on http://" + settings['hostname']
+
+    config.trigger.before :halt do |trigger|
+        trigger.info = "stop docker stack..."
+        trigger.run_remote = {inline: "cd /vagrant/docker/run; docker-compose down"}
+    end
 end
