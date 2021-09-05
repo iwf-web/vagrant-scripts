@@ -14,7 +14,7 @@ class DockerPassword
         begin
         system 'stty -echo'
         print "Password: "
-        pass = URI.escape(STDIN.gets.chomp)
+        pass = CGI.escape(STDIN.gets.chomp)
         ensure
         system 'stty echo'
         end
