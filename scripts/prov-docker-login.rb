@@ -14,7 +14,7 @@ class DockerPassword
         begin
         system 'stty -echo'
         print "Password: "
-        pass = CGI.escape(STDIN.gets.chomp)
+        pass = URI.encode_www_form_component(CGI.unescape(STDIN.gets.chomp)).gsub('+', '%20')
         ensure
         system 'stty echo'
         end

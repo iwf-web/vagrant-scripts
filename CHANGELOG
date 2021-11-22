@@ -3,6 +3,7 @@ VERSION 2  MAJOR UPGRADE TO DEBIAN STRETCH
 ==========================================
 
    Version 2.3 - kernel and system update before installing vbguest additions
+      22/11/2021 10:10  2.3.4  improve password handling for docker
       01/09/2021 15:18  2.3.3  stop docker stack before vagrant halt, use cgi.escape instead of url.escape
       02/07/2021 15:00  2.3.2  updated readme to install project from github
       27/04/2021 15:37  2.3.1  update known hosts for git.iwf.io upon provisioning a new box
