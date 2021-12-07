@@ -11,11 +11,12 @@ unless File.exist?("vagrant_settings.yml")
     puts "No vagrant-setting.yml file found: Please copy vagrant-settings.yml.dist to vagrant-settings.yml (in docker/vagrant folder)"
     exit
 end
-
 settings = YAML.load_file 'vagrant_settings.yml'
 
-require_relative 'scripts/all.rb'
+require_relative 'scripts/vagrant-plugins-check.rb'
+vagrant_plugins_check()
 
+require_relative 'scripts/all.rb'
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     init_all(config, settings)
 end

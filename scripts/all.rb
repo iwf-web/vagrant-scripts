@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 require_relative 'init-base-vm.rb'
-require_relative 'vagrant-plugins-check-and-config.rb'
+require_relative 'vagrant-plugins-config.rb'
 require_relative 'init-shared-folder.rb'
 require_relative 'apply-vm-settings.rb'
 require_relative 'prov-install-docker.rb'
