@@ -39,6 +39,6 @@ def init_all(config, settings)
 
     config.trigger.before :halt do |trigger|
         trigger.info = "stop docker stack..."
-        trigger.run_remote = {inline: "cd /vagrant/docker/run; docker-compose down"}
+        trigger.run_remote = {inline: "cd /vagrant/docker/run; docker compose down"}
     end
 end
