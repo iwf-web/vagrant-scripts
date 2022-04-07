@@ -11,6 +11,6 @@
     }
   ],
   "require-dev": {
-    "liip/rmt": "^1.3"
+    "liip/rmt": "^1.7"
   }
 }
